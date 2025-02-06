@@ -6,17 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		081B24A62D533D08001D372E /* SaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081B24A32D533D08001D372E /* SaverView.swift */; };
+		081B24A92D5340C3001D372E /* thumbnail.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 081B24A82D5340C3001D372E /* thumbnail.tiff */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		081B248F2D533B39001D372E /* TimeScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		081B24A32D533D08001D372E /* SaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverView.swift; sourceTree = "<group>"; };
+		081B24A82D5340C3001D372E /* thumbnail.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = thumbnail.tiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		081B24912D533B39001D372E /* TimeScreenSaver */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TimeScreenSaver;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		081B248C2D533B39001D372E /* Frameworks */ = {
@@ -32,7 +31,7 @@
 		081B24852D533B39001D372E = {
 			isa = PBXGroup;
 			children = (
-				081B24912D533B39001D372E /* TimeScreenSaver */,
+				081B24A52D533D08001D372E /* TimeScreenSaver */,
 				081B24902D533B39001D372E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +42,23 @@
 				081B248F2D533B39001D372E /* TimeScreenSaver.saver */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		081B24A22D533D08001D372E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				081B24A82D5340C3001D372E /* thumbnail.tiff */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		081B24A52D533D08001D372E /* TimeScreenSaver */ = {
+			isa = PBXGroup;
+			children = (
+				081B24A32D533D08001D372E /* SaverView.swift */,
+				081B24A22D533D08001D372E /* Resources */,
+			);
+			path = TimeScreenSaver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +87,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				081B24912D533B39001D372E /* TimeScreenSaver */,
-			);
 			name = TimeScreenSaver;
 			packageProductDependencies = (
 			);
@@ -92,6 +105,7 @@
 				TargetAttributes = {
 					081B248E2D533B39001D372E = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
@@ -119,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081B24A92D5340C3001D372E /* thumbnail.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081B24A62D533D08001D372E /* SaverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +185,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -193,6 +210,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYMROOT = "${PROJECT_DIR}";
 			};
 			name = Debug;
 		};
@@ -230,6 +248,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -247,24 +266,32 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SYMROOT = "${PROJECT_DIR}";
 			};
 			name = Release;
 		};
 		081B24992D533B39001D372E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FL7T8233P6;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = FL7T8233P6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = TimeScreenSaverView;
+				INFOPLIST_KEY_NSPrincipalClass = TimeScreenSaver.SaverView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeScreenSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -272,18 +299,24 @@
 		081B249A2D533B39001D372E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FL7T8233P6;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = FL7T8233P6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = TimeScreenSaverView;
+				INFOPLIST_KEY_NSPrincipalClass = TimeScreenSaver.SaverView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeScreenSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 6.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
